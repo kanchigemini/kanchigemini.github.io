@@ -15,12 +15,12 @@ echo "ユーザのパスワード" | sudo apt update && sudo apt install -y --no
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 # Update .bash_profile
-touch ~/.bash_profile
-echo -e "# pyenv paths" >> ~/.bash_profile
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-source ~/.bash_profile
+touch ~/.bashrc
+echo -e "# pyenv paths" >> ~/.bashrc
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
 pyenv -v
 
 # Install Python and set default
