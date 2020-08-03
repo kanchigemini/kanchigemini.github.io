@@ -1,0 +1,5 @@
+# retrain.pyを実行するとき
+python retrain.py --image_dir ./train/ --output_graph=retrained_graph_fashion.pb --output_labels=retrained_labels_fashion.txt
+
+# label_image.pyを実行するとき
+python label_image.py --image ./test/casual/IMG_8612.jpg --graph retrained_graph_fashion.pb --labels retrained_labels_fashion.txt --input_layer=Placeholder --output_layer=final_result
