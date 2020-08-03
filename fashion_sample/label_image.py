@@ -20,13 +20,14 @@ from __future__ import print_function
 import argparse
 
 import numpy as np
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import glob
 
 
 def load_graph(model_file):
   graph = tf.Graph()
-  graph_def = tf.compat.v1.GraphDef()
+  graph_def = tf.GraphDef()
 
   with open(model_file, "rb") as f:
     graph_def.ParseFromString(f.read())
