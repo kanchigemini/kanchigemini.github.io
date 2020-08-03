@@ -26,7 +26,7 @@ import glob
 
 def load_graph(model_file):
   graph = tf.Graph()
-  graph_def = tf.GraphDef()
+  graph_def = tf.compat.v1.GraphDef()
 
   with open(model_file, "rb") as f:
     graph_def.ParseFromString(f.read())
